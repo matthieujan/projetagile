@@ -1,2 +1,2 @@
 #Projet agile
-TODO
+To run : `docker run -d --name projetagile --publish 80:80 matthieujan/projetagile`
