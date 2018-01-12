@@ -8,18 +8,11 @@ public class Routes {
     public static void setRoutes() {
 
         get("/", (request, response) -> {
-        	response.status(200);
-        	response.type("text/html; charset=utf-8");
-        	String documentation = "Doc : \n";
-        	documentation += "/demandes: pas implémenté\n";
-        	documentation += "/demandes/id: pas implémenté\n";
-        	return documentation;
+        	return DocumentationRoute.handle(request, response);
         });
 
         post("/demandes", (request, response) -> {
-        	response.status(501);
-        	response.type("text/html; charset=utf-8");
-        	return "\"demandes/\" pas implémenté ";
+        	return PostDemandRoute.handle(request, response);
         });
 
         put("/demandes/:id", (request, response) -> {
@@ -29,9 +22,7 @@ public class Routes {
         });
 
         get("/demandes", (request, response) -> {
-        	response.status(501);
-        	response.type("text/html; charset=utf-8");
-        	return "\"demandes/\" pas implémenté ";
+        	return GetDemandesRoute.handle(request, response);
         });
 
         get("/demandes/:id", (request, response) -> {
@@ -41,9 +32,8 @@ public class Routes {
         });
 
         post("/demandes/:id", (request, response) -> {
-        	response.status(501);
-        	response.type("text/html; charset=utf-8");
-        	return "\"demandes/id\" pas implémenté ";
+        	
+        	return PostDemandIdRoute.handle(request, response);
         });
     }
 }
