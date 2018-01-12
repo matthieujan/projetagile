@@ -9,7 +9,7 @@ public class Routes {
 
         get("/", (request, response) -> {
         	response.status(200);
-        	response.type("text/html");
+        	response.type("text/html; charset=utf-8");
         	String documentation = "Doc : \n";
         	documentation += "/demandes: pas implémenté\n";
         	documentation += "/demandes/id: pas implémenté\n";
@@ -18,31 +18,31 @@ public class Routes {
 
         post("/demandes", (request, response) -> {
         	response.status(501);
-        	response.type("text/html");
+        	response.type("text/html; charset=utf-8");
         	return "\"demandes/\" pas implémenté ";
         });
 
         put("/demandes/:id", (request, response) -> {
         	response.status(501);
-        	response.type("text/html");
+        	response.type("text/html; charset=utf-8");
         	return "\"demandes/id\" pas implémenté ";
         });
 
         get("/demandes", (request, response) -> {
         	response.status(501);
-        	response.type("text/html");
+        	response.type("text/html; charset=utf-8");
         	return "\"demandes/\" pas implémenté ";
         });
 
         get("/demandes/:id", (request, response) -> {
         	response.status(501);
-        	response.type("text/html");
+        	response.type("text/html; charset=utf-8");
         	return "\"demandes/id\" pas implémenté ";
         });
 
         post("/demandes/:id", (request, response) -> {
         	response.status(501);
-        	response.type("text/html");
+        	response.type("text/html; charset=utf-8");
         	return "\"demandes/id\" pas implémenté ";
         });
     }
