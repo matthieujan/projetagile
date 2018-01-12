@@ -1,4 +1,4 @@
-1package sparkexample;
+package sparkexample;
 
 import static spark.Spark.*;
 
@@ -8,5 +8,4 @@ public class Test {
         setPort(80);
         Routes.setRoutes();
     }
-        
 }

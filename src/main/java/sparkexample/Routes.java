@@ -3,47 +3,47 @@ package sparkexample;
 import static spark.Spark.*;
 
 public class Routes {
-	
+
 
     public static void setRoutes() {
-    	
+
         get("/", (request, response) -> {
-        	response.status(200);          
+        	response.status(200);
         	response.type("text/xml");
         	String documentation = "Doc : \n";
-        	documentation += "/demandes: pas implémenté\n";
-        	documentation += "/demandes/id: pas implémenté\n";
+        	documentation += "/demandes: pas implÃ©mentÃ©\n";
+        	documentation += "/demandes/id: pas implÃ©mentÃ©\n";
         	return documentation;
         });
-        
+
         post("/demandes", (request, response) -> {
-        	response.status(501);          
-        	response.type("text/xml");  
-        	return "\"demandes/\" pas implémenté ";
+        	response.status(501);
+        	response.type("text/xml");
+        	return "\"demandes/\" pas implÃ©mentÃ© ";
         });
-        
+
         put("/demandes/:id", (request, response) -> {
-        	response.status(501);          
-        	response.type("text/xml");  
-        	return "\"demandes/id\" pas implémenté ";
+        	response.status(501);
+        	response.type("text/xml");
+        	return "\"demandes/id\" pas implÃ©mentÃ© ";
         });
-        
+
         get("/demandes", (request, response) -> {
-        	response.status(501);          
-        	response.type("text/xml");  
-        	return "\"demandes/\" pas implémenté ";
+        	response.status(501);
+        	response.type("text/xml");
+        	return "\"demandes/\" pas implÃ©mentÃ© ";
         });
-        
+
         get("/demandes/:id", (request, response) -> {
-        	response.status(501);          
-        	response.type("text/xml");  
-        	return "\"demandes/id\" pas implémenté ";
+        	response.status(501);
+        	response.type("text/xml");
+        	return "\"demandes/id\" pas implÃ©mentÃ© ";
         });
-        
+
         post("/demandes/:id", (request, response) -> {
-        	response.status(501);          
-        	response.type("text/xml");  
-        	return "\"demandes/id\" pas implémenté ";
+        	response.status(501);
+        	response.type("text/xml");
+        	return "\"demandes/id\" pas implÃ©mentÃ© ";
         });
     }
 }
