@@ -10,7 +10,6 @@ public class PostDemandRoute {
 		String content = request.body();
 		Demandes.putDemandes(content);
     	response.type("text/html; charset=utf-8");
-    	System.out.println(content);
     	return "la demande a bien été envoyée";
 	}
 
