@@ -13,10 +13,10 @@ public class GetDemandesRoute {
     	Demandes.putDemandes("Bonjour");
     	Demandes.putDemandes("Bonsoir");
 
-    	for(int i = 0; i<Demandes.Demandes.size();i++)
-    	{
-    		demandes = demandes + Demandes.getDemandesById(i) + " ";
-    	}
+//    	for(int i = 0; i<Demandes.Demandes.size();i++)
+//    	{
+//    		demandes = demandes + Demandes.getDemandesById(i) + " ";
+//    	}
     	return demandes;
 	}
 
