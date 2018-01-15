@@ -7,7 +7,7 @@ public class PostDemandRoute {
 	
 	public static String handle(Request request, Response response) {
 		response.status(501);
-		String content = request.queryString();
+		String content = request.body();
 		Demandes.putDemandes(content);
     	response.type("text/html; charset=utf-8");
     	System.out.println(content);
