@@ -18,7 +18,7 @@ public class Routes {
         put("/demandes/:id", (request, response) -> {
         	response.status(501);
         	response.type("text/html; charset=utf-8");
-        	return "\"demandes/id\" pas implémenté ";
+        	return "Pas implémenté";
         });
 
         get("/demandes", (request, response) -> {
@@ -28,7 +28,7 @@ public class Routes {
         get("/demandes/:id", (request, response) -> {
         	response.status(501);
         	response.type("text/html; charset=utf-8");
-        	return "\"demandes/id\" pas implémenté ";
+        	return GetDemandIdRoute.handle(request, response);
         });
 
         post("/demandes/:id", (request, response) -> {
