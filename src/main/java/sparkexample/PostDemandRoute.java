@@ -8,8 +8,10 @@ public class PostDemandRoute {
 	public static String handle(Request request, Response response) {
 		response.status(501);
 		String content = request.queryString();
+		Demandes.putDemandes(content);
     	response.type("text/html; charset=utf-8");
-    	return content;
+    	System.out.println(content);
+    	return "la demande a bien été envoyée";
 	}
 
 }

@@ -14,11 +14,4 @@ public class Demandes {
 	public static void putDemandes(String demandes) {
 		Demandes.put(Demandes.size(), demandes);
 	}
-
-	public static void main(String[] args) {
-		putDemandes("coucou");
-		putDemandes("coucou2");
-		System.out.println(getDemandesById(0));
-		System.out.println(getDemandesById(2));
-	}
 }
