@@ -1,23 +1,38 @@
 package sparkexample;
 
+import java.util.ArrayList;
+
 import spark.Request;
 import spark.Response;
 
-//LISTER
 public class GetDemandesRoute {
-	
+
+	//LISTER
 	public static String handle(Request request, Response response) {
 		response.status(200);
-    	response.type("text/html; charset=utf-8");
-    	String demandes = "";
-    	Demandes.putDemandes("Bonjour");
-    	Demandes.putDemandes("Bonsoir");
+		response.type("text/html; charset=utf-8");
+		String doc = "";
+		doc += " <html>";
+		doc += " <body>";
+		doc += " <p>============Liste Demandes=================== <br /></p>";
 
-//    	for(int i = 0; i<Demandes.Demandes.size();i++)
-//    	{
-//    		demandes = demandes + Demandes.getDemandesById(i) + " ";
-//    	}
-    	return demandes;
+		ArrayList<String> AllDemandes = Demandes.getAllDemandes();
+		if (AllDemandes.size()<=0) {
+			doc += " <p>Il n'y a pas de demandes</p>";
+		} else {
+			doc += " <ul>";
+			for (int i = 0; i < AllDemandes.size(); i++) {
+				doc += " <li>";
+				doc += "Demande : <a href=/demandes/"+i+">"+AllDemandes.get(i)+"</a>";
+				doc += " </li>";
+			}
+			doc += " </ul>";
+		}
+		doc += " </body>";
+		doc += " </html>";
+
+
+		return doc;
 	}
 
 }
