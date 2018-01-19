@@ -1,5 +1,6 @@
 package sparkexample;
 
+import spark.QueryParamsMap;
 import spark.Request;
 import spark.Response;
 
@@ -8,24 +9,10 @@ import java.util.HashMap;
 public class PostDemandRoute {
 	
 	public static String handle(Request request, Response response) {
-		String content = request.body();
-		String[] params = content.split("&");
-        HashMap<String,String> paramsMap = new HashMap();
-
-        String key = "";
-        String value = "";
-        for(String sentences:params){
-            key=sentences.split("=")[0];
-			value=sentences.split("=")[1];
-
-            paramsMap.put(key,value);
-        }
-
-
         String answer = "";
-        if(paramsMap.containsKey("name")){
+        if(!request.queryParams("name").isEmpty()){
 			response.status(201);
-			Demandes.putDemandes(paramsMap.get("name"));
+			Demandes.putDemandes(request.queryParams("name"));
 			String url = request.host()+"/demandes/"+Demandes.getDemandesSize();
 			answer = "<a href=\""+url+"\">"+url+"</a>";
 		}else{
