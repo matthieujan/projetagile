@@ -13,7 +13,7 @@ public class GetDemandIdRoute {
     	String html = "";
     	html+= "<html>";
 			html+= "<body";
-				html+= "<p><b>Demandes :</b></p>";
+				html+= "<p><b>Demande :</b></p>";
 				html+= Demandes.getDemandesById(Integer.parseInt(request.params(":id")));
 			html+= "</body>";
 		html+= "</html>";
