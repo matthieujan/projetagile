@@ -9,7 +9,6 @@ public class GetDemandesRoute {
 
 	//LISTER
 	public static String handle(Request request, Response response) {
-		Demandes.putDemandes("coucou");
 		response.status(200);
 		response.type("text/html; charset=utf-8");
 		String doc = "";
