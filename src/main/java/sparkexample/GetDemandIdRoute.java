@@ -27,7 +27,7 @@ public class GetDemandIdRoute {
 			html+= "<body";
 				html+= "<p><b>Demande :</b></p>";
 				//On récupère la demande selon son ID.
-				html+= Demandes.getDemandesById(Integer.parseInt(request.params(":id")));
+				html+= Demandes.getDemandesById(Integer.parseInt(request.params(":id"))).description;
 			html+= "</body>";
 		html+= "</html>";
     	return html;
