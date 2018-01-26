@@ -16,14 +16,14 @@ public class GetDemandesRoute {
 		doc += " <body>";
 		doc += " <p>============Liste Demandes=================== <br /></p>";
 
-		ArrayList<String> AllDemandes = Demandes.getAllDemandes();
+		ArrayList<Demande> AllDemandes = Demandes.getAllDemandes();
 		if (AllDemandes.size()<=0) {
 			doc += " <p>Il n'y a pas de demandes</p>";
 		} else {
 			doc += " <ul>";
 			for (int i = 0; i < AllDemandes.size(); i++) {
 				doc += " <li>";
-				doc += "Demande : <a href=/demandes/"+i+">"+AllDemandes.get(i)+"</a>";
+				doc += "Demande : <a href=/demandes/"+i+">"+AllDemandes.get(i).description+"</a>";
 				doc += " </li>";
 			}
 			doc += " </ul>";
