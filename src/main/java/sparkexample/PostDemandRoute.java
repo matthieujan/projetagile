@@ -26,8 +26,8 @@ public class PostDemandRoute {
         if(demandeOk){
 			response.status(201);
             Demande d = new Demande(description,chargeutile,choix);
-			Demandes.putDemandes(d);
 			String url = request.host()+"/demandes/"+Demandes.getDemandesSize();
+			Demandes.putDemandes(d);
 
 			answer = "<html><body><a href=\""+url+"\">"+url+"</a></body></html>";
 		}else{
