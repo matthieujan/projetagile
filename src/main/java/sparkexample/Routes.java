@@ -24,6 +24,10 @@ public class Routes {
         get("/demandes", (request, response) -> {
         	return GetDemandesRoute.handle(request, response);
         });
+        
+        get("/demandes/create", (request, response) -> {
+        	return GetDemandesCreateRoute.handle(request, response);
+        });
 
         get("/demandes/:id", (request, response) -> {
         	response.status(501);
