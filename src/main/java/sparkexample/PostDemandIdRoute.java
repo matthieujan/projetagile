@@ -18,7 +18,16 @@ public class PostDemandIdRoute {
 //    	}else {
 //    		demande = "La requete "+demande+" est refusé.";
 //    	}
-    	return "todo";
+
+        Integer id = Integer.parseInt(request.params(":id"));
+        String choix = request.queryParams("choix");
+        String url = Demandes.getDemandesById(id).choix.get(choix);
+
+        String chargutil = Demandes.getDemandesById(id).chargeutile;
+
+
+
+    	return "Envoyé à l'url :"+url;
 	}
 
 
