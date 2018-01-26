@@ -12,3 +12,4 @@ Prends des entrées au format JSON
 
 ## Usage :
 To run : `docker run -d --name projetagile --publish 80:80 matthieujan/projetagile`
+Deploiement dans coreOs, utiliser le script rerundocker.sh
