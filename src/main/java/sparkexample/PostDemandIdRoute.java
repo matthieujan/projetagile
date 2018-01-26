@@ -12,11 +12,11 @@ import java.net.URL;
 
 //VOTER
 public class PostDemandIdRoute {
-	
+
 	public static String handle(Request request, Response response) {
 		response.status(200);
     	response.type("text/html; charset=utf-8");
-    	
+
 //    	String demande = Demandes.getDemandesById(Integer.parseInt(request.params(":id")));
 //    	Demandes.removeDemandesById(Integer.parseInt(request.params(":id")));
 //    	if(request.body().equals("oui")) {
@@ -35,10 +35,11 @@ public class PostDemandIdRoute {
             URL u = new URL(url);
             HttpURLConnection con = (HttpURLConnection) u.openConnection();
             con.setRequestMethod("POST");
+            con.setRequestProperty("User-Agent", "SparkServer");
             con.setDoOutput(true);
             OutputStream os = con.getOutputStream();
-
-            os.write(chargeutil.getBytes());
+            String raw = "chargeutile="+chargeutil;
+            os.write(raw.getBytes());
 
             os.flush();
             os.close();
