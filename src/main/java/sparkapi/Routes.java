@@ -1,4 +1,4 @@
-package sparkexample;
+package sparkapi;
 
 import static spark.Spark.*;
 
@@ -43,9 +43,5 @@ public class Routes {
         	return PostDemandIdRoute.handle(request, response);
         });
 
-        get("/test", (request, response) -> {
-        	return TestTwigRoute.handle(request, response);
-
-        });
      }
 }

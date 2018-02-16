@@ -1,4 +1,4 @@
-package sparkexample;
+package sparkapi;
 
 import spark.Request;
 import spark.Response;
@@ -27,9 +27,9 @@ public class PostDemandIdRoute {
 
         Integer id = Integer.parseInt(request.params(":id"));
         String choix = request.queryParams("choix");
-        String url = Demandes.getDemandesById(id).choix.get(choix);
+        String url = DemandList.getDemandesById(id).choix.get(choix);
         String answer = "Erreur traitement.";
-        String chargeutil = Demandes.getDemandesById(id).chargeutile;
+        String chargeutil = DemandList.getDemandesById(id).chargeutile;
 
         try {
             URL u = new URL(url);

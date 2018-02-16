@@ -1,9 +1,9 @@
-package sparkexample;
+package sparkapi;
 
 import spark.Request;
 import spark.Response;
 
-public class GetDemandesCreateRoute {
+public class GetDemandsCreateRoute {
 
 	
 	

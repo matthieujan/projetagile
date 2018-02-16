@@ -1,8 +1,8 @@
-package sparkexample;
+package sparkapi;
 
 import java.util.HashMap;
 
-public class Demande {
+public class Demand {
 	
 	public String description;
 	
@@ -10,7 +10,7 @@ public class Demande {
 	
 	public HashMap<String, String> choix ;
 	
-	public Demande(String d,String c,HashMap<String, String> ch) {
+	public Demand(String d,String c,HashMap<String, String> ch) {
 		
 		this.description=d;
 		this.chargeutile=c;

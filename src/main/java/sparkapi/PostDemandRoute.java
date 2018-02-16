@@ -1,4 +1,4 @@
-package sparkexample;
+package sparkapi;
 
 import spark.QueryParamsMap;
 import spark.Request;
@@ -25,9 +25,9 @@ public class PostDemandRoute {
         if(demandeOk)choix.put(request.queryParams("choix2"),request.queryParams("url2"));
         if(demandeOk){
 			response.status(201);
-            Demande d = new Demande(description,chargeutile,choix);
-			String url ="/demandes/"+Demandes.getDemandesSize();
-			Demandes.putDemandes(d);
+            Demand d = new Demand(description,chargeutile,choix);
+			String url ="/demandes/"+DemandList.getDemandesSize();
+			DemandList.putDemandes(d);
 
 			answer = "<html><body><a href=\""+url+"\">"+url+"</a></body></html>";
 		}else{
