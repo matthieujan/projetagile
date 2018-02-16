@@ -1,0 +1,170 @@
+{
+	"info": {
+		"name": "Sprint4",
+		"_postman_id": "6ff6c60c-83a8-25a7-d9d9-596f31dfd11c",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Liste des demandes",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "c3e17ee1-300e-441d-939a-7e3ef1868b8f",
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Response time is less than 300ms\"] = responseTime <300;",
+							"tests[\"Status code is 200\"] = responseCode.code === 200;"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "ensibs.westeurope.cloudapp.azure.com:81/demandes",
+					"host": [
+						"ensibs",
+						"westeurope",
+						"cloudapp",
+						"azure",
+						"com"
+					],
+					"port": "81",
+					"path": [
+						"demandes"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Visionnage d'une demande",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "2f6092b0-cf3b-42fa-8e1a-75e64409435a",
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Response time is less than 300ms\"] = responseTime <300;",
+							"tests[\"Status code is 200\"] = responseCode.code === 200;"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "ensibs.westeurope.cloudapp.azure.com:81/demandes/0",
+					"host": [
+						"ensibs",
+						"westeurope",
+						"cloudapp",
+						"azure",
+						"com"
+					],
+					"port": "81",
+					"path": [
+						"demandes",
+						"0"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Voter oui",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "ed89f17a-2c90-49a4-b425-294cbfdff483",
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Response time is less than 300ms\"] = responseTime <300;",
+							"tests[\"Status code is 200\"] = responseCode.code === 201;"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "oui"
+				},
+				"url": {
+					"raw": "ensibs.westeurope.cloudapp.azure.com:81/demandes/0/",
+					"host": [
+						"ensibs",
+						"westeurope",
+						"cloudapp",
+						"azure",
+						"com"
+					],
+					"port": "81",
+					"path": [
+						"demandes",
+						"0",
+						""
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Création d'une demande",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "b270bc54-0443-4e77-a053-78c9576e903c",
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Response time is less than 300ms\"] = responseTime <300;",
+							"tests[\"Status code is 200\"] = responseCode.code === 201;",
+							""
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "ensibs.westeurope.cloudapp.azure.com:81/demandes",
+					"host": [
+						"ensibs",
+						"westeurope",
+						"cloudapp",
+						"azure",
+						"com"
+					],
+					"port": "81",
+					"path": [
+						"demandes"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
