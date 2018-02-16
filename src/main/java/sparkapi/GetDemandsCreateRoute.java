@@ -27,11 +27,8 @@ public class GetDemandsCreateRoute {
 		doc +="<input type=\"text\" name=\"url2\" ><br>";
 		doc +="<input type=\"submit\" value=\"Submit\">";
 		doc +="</form>";
-
 		doc += " </body>";
 		doc += " </html>";
-
-
 		return doc;
 	}
 

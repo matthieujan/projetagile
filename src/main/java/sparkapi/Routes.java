@@ -11,7 +11,6 @@ import spark.ModelAndView;
 
 public class Routes {
 
-
     public static void setRoutes() {
 
         get("/", (request, response) -> {
@@ -28,20 +27,21 @@ public class Routes {
         	return "Pas implémenté";
         });
 
+        get("/demandes/create", (request, response) -> {
+        	return GetDemandsCreateRoute.handle(request,response);
+        });
         get("/demandes", (request, response) -> {
         	return GetDemandesRoute.handle(request, response);
         });
 
         get("/demandes/:id", (request, response) -> {
-        	response.status(501);
-        	response.type("text/html; charset=utf-8");
         	return GetDemandIdRoute.handle(request, response);
         });
 
         post("/demandes/:id", (request, response) -> {
-        	
         	return PostDemandIdRoute.handle(request, response);
         });
+
 
      }
 }
