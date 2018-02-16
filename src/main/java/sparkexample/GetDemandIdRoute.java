@@ -28,7 +28,7 @@ public class GetDemandIdRoute {
     	//On écrit la structure du HTML dans une chaine de caractère
     	String html = "";
     	html+= "<html>";
-			html+= "<body";
+			html+= "<body>";
 				html+= "<p><b>Demande :</b></p>";
 				//On récupère la demande selon son ID.
 				html+= Demandes.getDemandesById(Integer.parseInt(request.params(":id"))).description;
