@@ -1,4 +1,4 @@
-package sparkexample;
+package sparkapi;
 
 import java.util.ArrayList;
 
@@ -16,7 +16,7 @@ public class GetDemandesRoute {
 		doc += " <body>";
 		doc += " <p>============Liste Demandes=================== <br /></p>";
 
-		ArrayList<Demande> AllDemandes = Demandes.getAllDemandes();
+		ArrayList<Demand> AllDemandes = DemandList.getAllDemandes();
 		if (AllDemandes.size()<=0) {
 			doc += " <p>Il n'y a pas de demandes</p>";
 		} else {

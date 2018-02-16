@@ -1,4 +1,4 @@
-package sparkexample;
+package sparkapi;
 import com.google.gson.Gson;
 
 import spark.ResponseTransformer;

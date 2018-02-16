@@ -1,0 +1,20 @@
+		  <!-- renvoyer AllDemande -->
+		  <html>
+		  <body>
+		  <p>============Liste Demandes=================== <br /></p>
+
+		{% if (AllDemandes.length()<=0) %}
+			  <p>Il n'y a pas de demandes</p>
+		{% else %}
+			  <ul>
+			{% for valeur, demande in AllDemandes %} 
+				  <li>
+				 Demande : <a href=/demandes/+ {{valeur}} +>+ {{demande}}</a>
+				  </li>
+			{% endfor %}
+			  </ul>
+		{% endif %}
+		
+		  </body>
+		  </html>
+

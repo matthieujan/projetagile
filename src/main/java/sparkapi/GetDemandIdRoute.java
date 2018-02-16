@@ -1,4 +1,4 @@
-package sparkexample;
+package sparkapi;
 
 import spark.Request;
 import spark.Response;
@@ -23,15 +23,15 @@ public class GetDemandIdRoute {
 		//On renvoie ici du HTML
     	response.type("text/html; charset=utf-8");
 
-    	Demande demande = Demandes.getDemandesById(Integer.parseInt(request.params(":id")));
+    	Demand demande = DemandList.getDemandesById(Integer.parseInt(request.params(":id")));
 
     	//On écrit la structure du HTML dans une chaine de caractère
     	String html = "";
     	html+= "<html>";
-			html+= "<body";
+			html+= "<body>";
 				html+= "<p><b>Demande :</b></p>";
 				//On récupère la demande selon son ID.
-				html+= Demandes.getDemandesById(Integer.parseInt(request.params(":id"))).description;
+				html+= DemandList.getDemandesById(Integer.parseInt(request.params(":id"))).description;
 
 				if(demande.choix.size()!=0){
 					for(Map.Entry<String, String> currentEntry : demande.choix.entrySet()){
