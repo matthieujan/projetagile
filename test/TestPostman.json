@@ -87,11 +87,11 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "ed89f17a-2c90-49a4-b425-294cbfdff483",
+						"id": "8e24320d-356c-4672-8bd9-b5ec83873e98",
 						"type": "text/javascript",
 						"exec": [
 							"tests[\"Response time is less than 300ms\"] = responseTime <300;",
-							"tests[\"Status code is 200\"] = responseCode.code === 201;"
+							"//tests[\"Status code is 201\"] = responseCode.code === 201;"
 						]
 					}
 				}
@@ -129,11 +129,11 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "b270bc54-0443-4e77-a053-78c9576e903c",
+						"id": "d7c20a99-ca95-4485-b1d5-b46da8fe52b3",
 						"type": "text/javascript",
 						"exec": [
 							"tests[\"Response time is less than 300ms\"] = responseTime <300;",
-							"tests[\"Status code is 200\"] = responseCode.code === 201;",
+							"//tests[\"Status code is 201\"] = responseCode.code === 201;",
 							""
 						]
 					}
