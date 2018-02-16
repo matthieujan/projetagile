@@ -1,4 +1,4 @@
-FROM java:8 
+FROM java:8
 
 # Install maven
 RUN apt-get update && apt-get install -y maven
@@ -12,6 +12,7 @@ RUN ["mvn", "verify"]
 
 # Adding source, compile and package into a fat jar
 ADD src /code/src
+RUN ["mvn", "install"]
 RUN ["mvn", "package"]
 
 EXPOSE 80
