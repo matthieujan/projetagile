@@ -16,7 +16,8 @@ public class DocumentationRoute {
 		  doc += " <body>";
 			doc += " <p>============API=================== <br /></p>";
 			doc += " <p>Requete GET sur / pour renvoyer la documentation <br /></p>";
-			doc += " <p>Requete POST sur /demande pour creer une demande<br /></p>";
+			doc += " <p>Requete GET sur /demandes/create pour accéder au formulaire<br /><p>";
+			doc += " <p>Requete POST sur /demandes pour creer une demande<br /></p>";
 			doc += " <p>Requete GET sur /demandes pour lister les demandes <br /></p>";
 			doc += " <p>Requete GET sur /demande/{id_demande}   pour voir la demande <br /></p>";
 			doc += " <p>Requete POST sur /demande/{id_demande}  voter la demande  <br /></p>";
